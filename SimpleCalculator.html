@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="SimpleCalculator.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="brand">Simple Calculator</div>
+        <div class="nav-links">
+            <a href="#calculator">Calculator</a>
+            <a href="#historyBox">History</a>
+        </div>
+    </div>
+
+    <!-- Calculator Section -->
+    <div id="calculator" class="calculator">
+        <table border="2" cellspacing="2px" cellpadding="5px">
+            <caption>
+                <h1 class="cl">Simple Calculator</h1>
+            </caption>
+            <tr>
+                <td colspan="3" style="background-color: aquamarine;">
+                    <input class="t" type="text" id="res" disabled>
+                </td>
+                <td align="center"><button class="b" onclick="ac()">AC</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button class="b" onclick="show('1')">1</button></td>
+                <td align="center"><button class="b" onclick="show('2')">2</button></td>
+                <td align="center"><button class="b" onclick="show('3')">3</button></td>
+                <td align="center"><button class="b" onclick="show('+')">+</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button class="b" onclick="show('4')">4</button></td>
+                <td align="center"><button class="b" onclick="show('5')">5</button></td>
+                <td align="center"><button class="b" onclick="show('6')">6</button></td>
+                <td align="center"><button class="b" onclick="show('-')">-</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button class="b" onclick="show('7')">7</button></td>
+                <td align="center"><button class="b" onclick="show('8')">8</button></td>
+                <td align="center"><button class="b" onclick="show('9')">9</button></td>
+                <td align="center"><button class="b" onclick="show('*')">*</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button class="b" onclick="show('0')">0</button></td>
+                <td align="center"><button class="b" onclick="show('%')">%</button></td>
+                <td align="center"><button class="b" onclick="show('/')">/</button></td>
+                <td align="center"><button class="b" onclick="cal()">=</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- History Section -->
+    <div id="historyBox" class="historyBox">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+    </div>
+
+    <script src="SimpleCalculator.js"></script>
+</body>
+</html>
